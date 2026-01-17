@@ -1,0 +1,141 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body {
+
+  margin: 0;
+}
+
+/* HEADER CONTAINER */
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 70px;          /* tetapkan tinggi */
+  z-index: 1000;
+  padding: 10px 16px;        /* margin dalam header */
+  display: flex;
+  align-items: center;
+  /*gap: 12px;                 /* jarak logo–teks */
+  background-color: #fff;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.35);
+}
+
+/* LOGO */
+.logo {
+  height: 80px;              /* ukuran logo */
+  width: auto;
+  margin-left: 0px;
+  margin-right: 12px;
+}
+
+/* TEKS HEADER */
+.header-text {
+  
+  display: flex;
+  flex-direction: column;
+}
+
+/* JUDUL */
+.header-title {
+  font-family: "Poppins",sans-serif; /* jenis font */
+  font-weight: 800;
+  font-size: 20px;           /* ukuran font */
+  margin: 0;                 /* hilangkan margin default */
+  line-height: 1.2;
+  color: #000;
+}
+
+/* SUBJUDUL */
+.header-subtitle {
+  font-family: "Poppins",sans-serif;
+  font-size: 11px;
+  margin-top: 2px;
+  color: rgb(104, 97, 97);
+}
+
+/*margin kontrol*/
+.leaflet-top {
+  top: 100px !important; /* header 70px + jarak */
+}
+
+/*legenda*/
+
+/* Container layer control */
+.leaflet-control-layers {
+  border-radius: 8px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.3);
+  overflow: hidden;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Judul LEGENDA (dari HTML) */
+.legend-title {
+  display: none;
+}
+
+/* Judul muncul saat layer control dibuka */
+.leaflet-control-layers-expanded .legend-title {
+  display: block;
+  width: 100%;
+  margin: 0;
+  padding: 8px 0;
+
+  background: #ffffff;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-size: 13px;
+  text-align: center;
+  letter-spacing: 1px;
+  border-bottom: 1px solid #ddd;
+}
+
+.leaflet-control-layers-expanded .leaflet-control-layers-list {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+/*>> hilang*/
+/* 1. Saat legend terbuka, HILANGKAN AREA TOGGLE */
+.leaflet-control-layers-expanded 
+.leaflet-control-layers-toggle {
+  display: none;
+}
+
+/* 2. Rapikan list agar naik ke atas */
+.leaflet-control-layers-expanded 
+.leaflet-control-layers-list {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+
+
+/* FONT POPUP LEAFLET */
+.leaflet-popup-content {
+    font-family: "Poppins";
+    line-height: 1.5;
+    color: #333;
+}
+
+/* Judul / label penting di popup */
+.leaflet-popup-content b {
+    font-weight: 600;
+    color: #111;
+}
+
+/* Link di popup (Dokumentasi) */
+.leaflet-popup-content a {
+    color: #0066cc;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.leaflet-popup-content a:hover {
+    text-decoration: underline;
+}
+
+/*popup BOLD*/
+.popup-title {
+    font-weight: 800;
+    font-size: 13px;
+}
